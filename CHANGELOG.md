@@ -1,17 +1,10 @@
 Changes by Version
 ==================
 
-1.16.0 (unreleased)
+Sanitizer (2019-11-25)
 ------------------
-#### Backend Changes
-
-##### Breaking Changes
-
-##### New Features
-
-##### Bug fixes, Minor Improvements
-
-#### UI Changes
+Current branch sanitizer is built on top of 1.15.0
+#### Collector now has a zipkin span sanitizer (filter) for pii info in requests
 
 1.15.0 (2019-11-07)
 ------------------
