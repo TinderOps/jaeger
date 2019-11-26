@@ -1,5 +1,12 @@
 Changes by Version
 ==================
+Sanitizer (2019-11-25)
+------------------
+Current branch sanitizer is built on top of 1.17.0
+branch sanitizer last update 2020-02-25
+##### Collector now has a zipkin span sanitizer (filter) for pii info in requests
+
+==================
 
 1.18.0 (unreleased)
 ------------------
@@ -175,7 +182,6 @@ running curator would immediately remove the old index.
 
 * Build platform binaries as part of CI ([#1909](https://github.com/jaegertracing/jaeger/pull/1909), [@yurishkuro](https://github.com/yurishkuro))
 * Upgrade and fix dependencies ([#1907](https://github.com/jaegertracing/jaeger/pull/1907), [@yurishkuro](https://github.com/yurishkuro))
-
 
 1.15.0 (2019-11-07)
 ------------------
