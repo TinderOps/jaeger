@@ -26,6 +26,11 @@ func TestTagsPiiSanitizer(t *testing.T) {
 			&zipkincore.BinaryAnnotation{Key: "http.url", Value: []byte("http://call.service.a/user/aaaaaabbbbbbccccc8888cdddddd/health"), AnnotationType: zipkincore.AnnotationType_STRING},
 			[]byte("http://call.service.a/user/__REDACTED__/health"),
 		},
+		{
+
+			&zipkincore.BinaryAnnotation{Key: "http.url", Value: []byte("http://call.service.a/user?uid=aaaaaabbbbbbccccc8888cdddddd"), AnnotationType: zipkincore.AnnotationType_STRING},
+			[]byte("http://call.service.a/user?uid=__REDACTED__"),
+		},
 	}
 
 	for _, test := range tests {

@@ -254,6 +254,10 @@ else
 	$(GOBUILD) -o ./cmd/collector/collector-$(GOOS) $(BUILD_INFO) ./cmd/collector/main.go
 endif
 
+.PHONY: build-collector-local
+build-collector-local: 
+	$(GOBUILD) -o ./cmd/collector/collector-linux $(BUILD_INFO) ./cmd/collector/main.go
+
 .PHONY: build-ingester
 build-ingester:
 ifeq ($(GOARCH), s390x)
