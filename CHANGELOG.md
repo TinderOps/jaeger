@@ -3,7 +3,7 @@ Changes by Version
 Sanitizer (2020-07-20)
 ------------------
 #### Current branch sanitizer is built on top of 1.18.1
-branch sanitizer last update 2020-02-25
+branch sanitizer last update 2020-07-20
 ##### Collector now has a zipkin span sanitizer (filter) for pii info in requests
 ##### fix the regex for pii
 
