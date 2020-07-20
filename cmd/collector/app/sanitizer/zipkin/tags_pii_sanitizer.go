@@ -32,9 +32,9 @@ func (s *tagsPiiSanitizer) Sanitize(span *zc.Span) *zc.Span {
 
 // helper function to check if there is any pii related info
 func checkAndProcessPii(s []byte) []byte {
-	replStr := "/__REDACTED__"
+	replStr := "__REDACTED__"
 	// possible userid/matchid
-	re1 := regexp.MustCompile(`/[0-9a-fA-F]{24,56}`)
+	re1 := regexp.MustCompile(`[0-9a-fA-F]{24,64}`)
 	check := re1.ReplaceAllString(string(s), replStr)
 	return []byte(check)
 }

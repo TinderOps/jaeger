@@ -254,6 +254,10 @@ build-otel-ingester:
 build-otel-all-in-one:
 	cd ${OTEL_COLLECTOR_DIR}/cmd/all-in-one && $(GOBUILD) -o ./opentelemetry-all-in-one-$(GOOS)-$(GOARCH) $(BUILD_INFO) main.go
 
+.PHONY: build-collector-local
+build-collector-local: 
+	$(GOBUILD) -o ./cmd/collector/collector-linux $(BUILD_INFO) ./cmd/collector/main.go
+
 .PHONY: build-ingester
 build-ingester:
 	$(GOBUILD) -o ./cmd/ingester/ingester-$(GOOS)-$(GOARCH) $(BUILD_INFO) ./cmd/ingester/main.go
