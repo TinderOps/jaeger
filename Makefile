@@ -256,11 +256,7 @@ build-otel-all-in-one:
 
 .PHONY: build-collector-local
 build-collector-local: 
-	$(GOBUILD) -o ./cmd/collector/collector-linux $(BUILD_INFO) ./cmd/collector/main.go
-
-.PHONY: build-collector-local
-build-collector-local: 
-	$(GOBUILD) -o ./cmd/collector/collector-linux $(BUILD_INFO) ./cmd/collector/main.go
+	$(GOBUILD) -o ./cmd/collector/collector-${GOOS}-$(GOARCH) $(BUILD_INFO) ./cmd/collector/main.go
 
 .PHONY: build-ingester
 build-ingester:
