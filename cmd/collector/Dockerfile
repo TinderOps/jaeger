@@ -1,6 +1,7 @@
 ARG base_image
 ARG debug_image
 
+<<<<<<< HEAD
 FROM $base_image AS release
 ARG TARGETARCH=amd64
 COPY collector-linux-$TARGETARCH /go/bin/collector-linux

@@ -1,5 +1,13 @@
 Changes by Version
 ==================
+Sanitizer (2021-01-21)
+------------------
+#### Current branch sanitizer is built on top of 1.21.0
+branch sanitizer last update 2021-01-21
+* Collector now has a zipkin span sanitizer (filter) for pii info in requests
+* fix the regex for pii
+
+==================
 
 1.22.0 (unreleased)
 -------------------
@@ -108,6 +116,7 @@ Changes by Version
 * Fix error equals ([#2429](https://github.com/jaegertracing/jaeger/pull/2429), [@albertteoh](https://github.com/albertteoh))
 
 ### UI Changes
+==================
 
 * UI pinned to version 1.11.0. The changelog is available here [v1.11.0](https://github.com/jaegertracing/jaeger-ui/blob/master/CHANGELOG.md#v1110-september-28-2020)
 
@@ -447,6 +456,7 @@ running curator would immediately remove the old index.
 * Build platform binaries as part of CI ([#1909](https://github.com/jaegertracing/jaeger/pull/1909), [@yurishkuro](https://github.com/yurishkuro))
 * Upgrade and fix dependencies ([#1907](https://github.com/jaegertracing/jaeger/pull/1907), [@yurishkuro](https://github.com/yurishkuro))
 
+=======
 
 1.15.0 (2019-11-07)
 ------------------
